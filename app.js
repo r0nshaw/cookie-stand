@@ -5,15 +5,15 @@
 var times = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var firstAndPike = {
-	cookiesSold: [],
-	minCust: 23,
-	maxCust: 65,
-	aveCookiesSold: 6.3,
-	randCustHour: function() {
-		var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust);
-		return Math.floor(custPerHour * this.aveCookiesSold);
-	},
-render: function() {
+  cookiesSold: [],
+  minCust: 23,
+  maxCust: 65,
+  aveCookiesSold: 6.3,
+  randCustHour: function() {
+    var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor(custPerHour * this.aveCookiesSold);
+  },
+  render: function() {
     var ulEl = document.getElementById('firstAndPike');
     console.log(ulEl);
     for(var i = 0; i < times.length; i++) {
@@ -29,6 +29,13 @@ firstAndPike.render();
 
 var seatacAirport = {
   cookiesSold: [],
+  minCust: 3,
+  maxCust: 24,
+  aveCookiesSold: 1.2,
+  randCustHour: function() {
+    var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust + 1);
+    return Math.floor(custPerHour * this.aveCookiesSold);
+  },
   render: function() {
     var ulEl = document.getElementById('seatacAirport');
     for(var i = 0; i < times.length; i++) {
@@ -42,7 +49,14 @@ var seatacAirport = {
 seatacAirport.render();
 
 var seattleCenter = {
-  cookiesSold: [],
+	cookiesSold: [],
+	minCust: 11,
+	maxCust: 38,
+	aveCookiesSold: 3.7,
+	randCustHour: function() {
+		var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust + 1);
+		return Math.floor(custPerHour * this.aveCookiesSold);
+	},
   render:function() {
     var ulEl = document.getElementById('seattleCenter');
     for(var i = 0; i < times.length; i++) {
