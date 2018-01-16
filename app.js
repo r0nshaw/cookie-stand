@@ -10,8 +10,8 @@ var firstAndPike = {
 	maxCust: 65,
 	aveCookiesSold: 6.3,
 	randCustHour: function() {
-		var custPerHour = Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
-		return custPerHour;
+		var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust);
+		return Math.floor(custPerHour * this.aveCookiesSold);
 	},
 render: function() {
     var ulEl = document.getElementById('firstAndPike');
