@@ -49,14 +49,14 @@ var seatacAirport = {
 seatacAirport.render();
 
 var seattleCenter = {
-	cookiesSold: [],
-	minCust: 11,
-	maxCust: 38,
-	aveCookiesSold: 3.7,
-	randCustHour: function() {
-		var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust + 1);
-		return Math.floor(custPerHour * this.aveCookiesSold);
-	},
+  cookiesSold: [],
+  minCust: 11,
+  maxCust: 38,
+  aveCookiesSold: 3.7,
+  randCustHour: function() {
+    var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust + 1);
+    return Math.floor(custPerHour * this.aveCookiesSold);
+  },
   render:function() {
     var ulEl = document.getElementById('seattleCenter');
     for(var i = 0; i < times.length; i++) {
@@ -109,3 +109,17 @@ var firstAndPikeLocation = {
 };
 firstAndPikeLocation.introduction;
 console.log(firstAndPikeLocation);
+
+var allStores = [];
+var storeTable = document.getElementById('stores');
+
+function Store(name, cookiesNeeded, totalCookieSales) {
+  this.name = name;
+  this.cookiesNeeded = cookiesNeeded;
+  this.totalCookieSales;
+  allStores.push(this);
+}
+
+// store instances
+var firstAndPike = new Store(name, cookiesNeeded, totalCookieSales);
+var seatacAirport = new Store(name, cookiesNeeded, totalCookieSales);
