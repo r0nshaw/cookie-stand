@@ -71,6 +71,13 @@ seattleCenter.render();
 
 var capitolHill = {
   cookiesSold: [],
+  minCust: 20,
+  maxCust: 38,
+  aveCookiesSold: 2.3,
+  randCustHour: function() {
+    var custPerHour = (Math.random() * (this.maxCust - this.minCust) + this.minCust + 1);
+    return Math.floor(custPerHour * this.aveCookiesSold);
+  },
   render:function() {
     var ulEl = document.getElementById('capitolHill');
     for(var i = 0; i < times.length; i++) {
@@ -85,6 +92,13 @@ capitolHill.render();
 
 var alki = {
   cookiesSold: [],
+  minCust: 2,
+  maxCust: 16,
+  aveCookiesSold: 4.6,
+  randCustHour: function() {
+    var custPerHour = (Math.random() * (this.maxCust - minCust) + this.minCust + 1);
+    return Math.floor(custPerHour * this.aveCookiesSold);
+  },
   render:function() {
     var ulEl = document.getElementById('alki');
     for(var i = 0; i < times.length; i++) {
