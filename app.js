@@ -64,27 +64,27 @@ console.log(locations);
 
 
 
-// firstAndPike.methodName();
-// firstAndPike.randNumber();
+firstAndPike.methodName();
+firstAndPike.randNumber();
 
-// CookieStand.prototype.render(){};
-// alki.render();
+CookieStand.prototype.render(){};
+alki.render();
 
-// function makeHeaderRow() {
-//   var tableRow = document.createElement('tr');
-//   var theElement = document.createElement('th');
-//   theElement.textContent = null;
-//   salmonTable.appendChild(tableRow);
-//   tableRow.appendChild(theElement);
-//   for (var i = times.length; i++) {
-//     theElement = document.createElement('th');
-//     theElement.textContent = times[i];
-// tableRow.appendChild(theElement);
-//   }
-//   theElement = document.createElement('th');
-//   theElement.textContent = times[i];
-//   tableRow.appendChild(theElement);
-// }
+function makeHeaderRow() {
+  var tableRow = document.createElement('tr');
+  var theElement = document.createElement('th');
+  theElement.textContent = null;
+  salmonTable.appendChild(tableRow);
+  tableRow.appendChild(theElement);
+  for (var i = times.length; i++) {
+    theElement = document.createElement('th');
+    theElement.textContent = times[i];
+tableRow.appendChild(theElement);
+  }
+  theElement = document.createElement('th');
+  theElement.textContent = times[i];
+  tableRow.appendChild(theElement);
+}
 
 
 
